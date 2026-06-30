@@ -1,7 +1,5 @@
 
-implementation of forced practice to get notice
-# theGargled Hosting
-
+# implementation of forced practice to get notice
 # theGargled Hosting
 
 ## 🌐 Overview
