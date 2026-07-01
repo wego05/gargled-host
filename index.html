@@ -176,6 +176,20 @@
   .card p{color:var(--ink-soft);font-size:14.5px;margin:0;}
   .card .card-icon{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--burnt);margin-bottom:14px;letter-spacing:0.05em;}
 
+  /* ---- Donation banner ---- */
+  .donation-banner{
+    background:linear-gradient(135deg, var(--burnt) 0%, var(--burnt-dark) 100%);
+    color:#fff;
+    padding:24px;
+    border-radius:4px;
+    margin:48px 0;
+    text-align:center;
+  }
+  .donation-banner h3{color:#fff;font-size:20px;margin-bottom:8px;}
+  .donation-banner p{color:rgba(255,255,255,0.9);margin:0 0 14px;}
+  .donation-banner .btn{border-color:#fff;color:#fff;}
+  .donation-banner .btn:hover{background:rgba(255,255,255,0.1);}
+
   footer{
     border-top:2px solid var(--ink);
     padding:48px 0 36px;
@@ -418,7 +432,7 @@
       <div>
         <span class="block-eyebrow">Why it's free</span>
         <h2>Because we can</h2>
-        <p>Not so important! Running servers costs real money. So allow theGargled to run a minimal ads but only with your consent - we do not encourage donations but if you are gargling fun too much here is our link for your assumptious donations.nyahahha</p>
+        <p>Not so important! Running servers costs real money. So allow theGargled to run a minimal ads but only with your consent - we do not encourage donations but if you are gargling fun too much — you might want to support us.</p>
         <button class="btn btn-pine" data-goto="donate">Support theGargled</button>
       </div>
       <div class="quote-block">
@@ -427,6 +441,15 @@
       </div>
     </div>
   </section>
+
+  <!-- Donation CTA Banner -->
+  <div class="wrap">
+    <div class="donation-banner">
+      <h3>💝 Help keep theGargled running</h3>
+      <p>Every contribution helps us maintain and improve infrastructure for over 12,000 free sites.</p>
+      <button class="btn btn-outline" data-goto="donate">Donate now</button>
+    </div>
+  </div>
 </div>
 
 <!-- ============================================================ -->
@@ -495,12 +518,12 @@
       <div>
         <span class="block-eyebrow">Mission</span>
         <h2>To minimize the misclassification by recursive gargling. nyahahaha</h2>
-        <p>A website and a working email address is something you want without a valid reason for the monment but it'll make sense — you might see this as a joke but it is family-oriented as we fully coomiy on giving the what was claimed.</p>
+        <p>A website and a working email address is something you want without a valid reason for the moment but it'll make sense — you might see this as a joke but it is family-oriented as we fully believe in it.</p>
       </div>
       <div>
         <span class="block-eyebrow">Vision</span>
         <h2>A web where the smallest sites are as well-kept as the biggest ones.</h2>
-        <p>We uphold integrity so we do not mix corporate rules and strictness it's free and premium so make the most of it, the lived experience you'll had with is a nod until it wasnt.nyahahah.</p>
+        <p>We uphold integrity so we do not mix corporate rules and strictness. It's free and premium so make the most of it. The lived experience you'll have with us is genuine.</p>
       </div>
     </section>
 
@@ -553,7 +576,7 @@
     </div>
 
     <h2 id="tos">Terms of service</h2>
-    <p>By creating an account, you agree to use theGargled Hosting for lawful purposes and to keep your account credentials secure. Free-tier accounts are subject to the resource limits stated on your plan page; exceeding them may result in throttling or suspension with notice where possible.</p>
+    <p>By creating an account, you agree to use theGargled Hosting for lawful purposes and to keep your account credentials secure. Free-tier accounts are subject to the resource limits stated on your dashboard.</p>
     <p>We may suspend accounts without prior notice in cases of active abuse, security compromise, or imminent harm to other users — see the Acceptable Use Policy below for specifics.</p>
 
     <h2 id="aup">Acceptable use policy</h2>
@@ -568,10 +591,10 @@
     <p>Violations are handled through our Report a problem page and reviewed by the abuse &amp; trust team within 48 hours.</p>
 
     <h2 id="privacy">Privacy &amp; data handling</h2>
-    <p>We collect the minimum data needed to operate your account: email, billing details for paid plans, and server logs retained for 30 days for abuse investigation. We do not sell or share this data with advertisers or data brokers. Full data retention schedules are available on request.</p>
+    <p>We collect the minimum data needed to operate your account: email, billing details for paid plans, and server logs retained for 30 days for abuse investigation. We do not sell or share this data with third parties.</p>
 
     <h2 id="dmca">DMCA &amp; takedown process</h2>
-    <p>Copyright holders may submit takedown notices to abuse@gargled.com. We respond to valid notices within 2 business days and notify the affected account holder, who may submit a counter-notice per standard DMCA procedure.</p>
+    <p>Copyright holders may submit takedown notices to abuse@gargled.com. We respond to valid notices within 2 business days and notify the affected account holder, who may submit a counter-notice per the DMCA.</p>
 
     <h2 id="data-req">Data &amp; law enforcement requests</h2>
     <p>We disclose user data to law enforcement only in response to valid legal process (subpoena, court order, or warrant, as applicable), and we notify the affected user unless legally prohibited from doing so.</p>
@@ -614,15 +637,15 @@
 
       <div class="checkrow">
         <input type="checkbox" id="tos-check">
-        <label for="tos-check">I agree to the <a href="#" data-goto="compliance">Terms of Service</a> and <a href="#" data-goto="compliance">Acceptable Use Policy</a>, and I understand free-tier limits apply.</label>
+        <label for="tos-check">I agree to the <a href="#" data-goto="compliance">Terms of Service</a> and <a href="#" data-goto="compliance">Acceptable Use Policy</a>, and I understand free-tier limits apply</label>
       </div>
 
       <button class="btn btn-primary btn-block">Create free account</button>
 
       <div class="divider-or">or continue with</div>
       <div class="field-row">
-        <button class="btn btn-outline btn-block">Google</button>
-        <button class="btn btn-outline btn-block">GitHub</button>
+        <button class="btn btn-outline btn-block" onclick="initOAuthFlow('google')">Google</button>
+        <button class="btn btn-outline btn-block" onclick="initOAuthFlow('github')">GitHub</button>
       </div>
 
       <div class="form-foot">Already have an account? <a href="#" data-goto="login">Log in</a></div>
@@ -658,8 +681,8 @@
 
       <div class="divider-or">or continue with</div>
       <div class="field-row">
-        <button class="btn btn-outline btn-block">Google</button>
-        <button class="btn btn-outline btn-block">GitHub</button>
+        <button class="btn btn-outline btn-block" onclick="initOAuthFlow('google')">Google</button>
+        <button class="btn btn-outline btn-block" onclick="initOAuthFlow('github')">GitHub</button>
       </div>
 
       <div class="form-foot">New here? <a href="#" data-goto="register">Create a free account</a></div>
@@ -808,9 +831,10 @@
         <a href="#" data-goto="compliance">Compliance</a>
       </div>
       <div>
-        <h4>Help</h4>
+        <h4>Help &amp; support</h4>
         <a href="#" data-goto="suggest">Suggest a feature</a>
         <a href="#" data-goto="suggest">Report a problem</a>
+        <a href="#" data-goto="donate">Make a donation</a>
       </div>
     </div>
     <hr class="ledger-rule thin" style="margin-bottom:24px;">
@@ -821,6 +845,7 @@
   </div>
 </footer>
 
+<script src="auth/auth.js"></script>
 <script>
   // Page navigation
   function gotoPage(name){
