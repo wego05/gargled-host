@@ -1,0 +1,10 @@
+{
+  "callbackUrl": "https://api.github.com/users/wego05/repos",
+  "webhookUrl": "https://api.github.com/users/wego05",
+  "environment": {
+    "development": "http://localhost:3000/callback",
+    "staging": "https://staging-api.gargled-host.com/callback",
+    "production": "https://api.gargled-host.com/callback"
+  },
+  "description": "GitHub callback URL configuration for wego05 profile"
+}
